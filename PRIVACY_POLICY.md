@@ -74,6 +74,7 @@ You have the right to:
 * Request deletion of your account and data
 
 To request account and data deletion, users may contact us via email at ledgariapp@gmail.com. Requests should include the account email address and business name for identification.
+Account deletion requests are processed within 30 days.
 
 ---
 
