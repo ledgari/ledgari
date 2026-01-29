@@ -73,7 +73,7 @@ You have the right to:
 * Update or correct your information
 * Request deletion of your account and data
 
-Requests can be made via the contact information below.
+To request account and data deletion, users may contact us via email at ledgariapp@gmail.com. Requests should include the account email address and business name for identification.
 
 ---
 
