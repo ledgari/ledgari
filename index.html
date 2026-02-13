@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ledgari - Business Management for Entrepreneurs</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ff6a1a",
+                        "primary-dark": "#e55a10",
+                        "background-light": "#F7F9FC",
+                        "background-dark": "#23160f",
+                        "navy": "#0A1A2F",
+                        "slate-text": "#4A4A4A",
+                        "divider": "#E1E5EB",
+                        "app-bg": "#F7F9FC",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        "soft": "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
+                        "hover": "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.01)",
+                        "glass": "inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 20px 50px rgba(0, 0, 0, 0.3)",
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F7F9FC;
+        }
+        .text-navy { color: #0A1A2F; }
+        .bg-navy { background-color: #0A1A2F; }
+        .hero-gradient {
+            background: radial-gradient(circle at 70% 30%, #1a2e47 0%, #0A1A2F 100%);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .abstract-shape {
+            background: linear-gradient(135deg, #FF6A1A 0%, #ff8c4a 100%);
+            filter: blur(80px);
+            opacity: 0.15;
+        }
+        .floating-element {
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="text-slate-text font-display bg-background-light dark:bg-background-dark overflow-x-hidden antialiased selection:bg-primary/30 selection:text-primary-dark">
+<nav class="fixed w-full z-50 bg-navy/30 backdrop-blur-md border-b border-white/5 transition-all duration-300 top-0">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex-shrink-0">
+<img alt="Ledgari Logo" class="h-14 w-auto object-contain" src="assets\images\splash_screen_logo.png"/>
+</div>
+<div class="md:hidden">
+<button class="text-white hover:text-primary">
+<span class="material-icons text-3xl">menu</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<section class="relative pt-40 pb-24 lg:pt-56 lg:pb-40 overflow-hidden hero-gradient">
+<div class="absolute top-0 right-0 w-[600px] h-[600px] abstract-shape rounded-full -translate-y-1/2 translate-x-1/4"></div>
+<div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/20 rounded-full blur-[100px] -translate-x-1/2 translate-y-1/2"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid lg:grid-cols-2 gap-16 lg:gap-12 items-center">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/10 mb-6 backdrop-blur-sm">
+<span class="bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">New</span>
+<span class="text-white/90 font-semibold text-sm">Coming Soon</span>
+</div>
+<h1 class="text-5xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1] mb-8">
+                    Stay on Top of Your Business. <br/>
+<span class="text-primary">Every Day.</span>
+</h1>
+<p class="text-xl text-white/70 mb-10 leading-relaxed max-w-lg">
+                    The all-in-one management platform designed for modern entrepreneurs. Track revenue, manage expenses, and grow your business with absolute clarity.
+                </p>
+<div class="relative inline-flex items-center gap-4 px-6 py-4 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl">
+<div class="flex -space-x-2">
+<div class="w-10 h-10 rounded-full bg-navy flex items-center justify-center text-white ring-2 ring-white/20 shadow-sm">
+<span class="material-symbols-outlined text-2xl">android</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white ring-2 ring-white/20 shadow-sm">
+<i class="fa-brands fa-apple text-white text-2xl"></i>
+</div>
+</div>
+<div>
+<p class="text-white font-bold text-lg leading-tight">Coming soon</p>
+<p class="text-primary font-medium text-sm">to Android and iPhone</p>
+</div>
+<div class="absolute -top-3 -right-3">
+<span class="flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+</span>
+</div>
+</div>
+</div>
+<div class="relative lg:ml-auto perspective-1000">
+<div class="relative w-full max-w-[500px] mx-auto h-[500px] flex items-center justify-center">
+<div class="glass-panel w-full aspect-square rounded-3xl p-6 relative transform rotate-y-[-10deg] rotate-x-[15deg] shadow-glass flex flex-col gap-6">
+<div class="flex justify-between items-center opacity-80 border-b border-white/10 pb-4">
+<div class="w-12 h-2 bg-white/20 rounded-full"></div>
+<div class="flex gap-2">
+<div class="w-6 h-6 rounded-full bg-white/10"></div>
+<div class="w-6 h-6 rounded-full bg-white/10"></div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="h-24 rounded-2xl bg-white/5 border border-white/10 p-4">
+<div class="w-1/2 h-2 bg-white/20 rounded mb-4"></div>
+<div class="w-3/4 h-4 bg-primary rounded"></div>
+</div>
+<div class="h-24 rounded-2xl bg-white/5 border border-white/10 p-4">
+<div class="w-1/2 h-2 bg-white/20 rounded mb-4"></div>
+<div class="w-3/4 h-4 bg-white/40 rounded"></div>
+</div>
+</div>
+<div class="flex-1 rounded-2xl bg-white/5 border border-white/10 p-4 flex items-end gap-2">
+<div class="flex-1 bg-white/10 rounded-t-lg h-[40%]"></div>
+<div class="flex-1 bg-primary/40 rounded-t-lg h-[65%]"></div>
+<div class="flex-1 bg-primary rounded-t-lg h-[90%]"></div>
+<div class="flex-1 bg-white/20 rounded-t-lg h-[50%]"></div>
+<div class="flex-1 bg-white/10 rounded-t-lg h-[30%]"></div>
+</div>
+</div>
+<div class="absolute -top-4 -right-12 w-48 h-60 glass-card rounded-2xl p-4 shadow-2xl transform rotate-[12deg] z-20 floating-element">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm">receipt_long</span>
+</div>
+<span class="text-navy font-bold text-xs">New Invoice</span>
+</div>
+<div class="space-y-2">
+<div class="h-1 w-full bg-gray-200 rounded"></div>
+<div class="h-1 w-2/3 bg-gray-200 rounded"></div>
+<div class="h-8 w-full bg-gray-50 rounded mt-4"></div>
+</div>
+<div class="mt-auto pt-8 flex justify-between items-end">
+<span class="text-[10px] text-gray-400">Total</span>
+<span class="text-navy font-bold">$1,250.00</span>
+</div>
+</div>
+<div class="absolute -bottom-8 -left-8 w-56 h-36 glass-card rounded-2xl p-5 shadow-2xl transform rotate-[-8deg] z-30 floating-element border-t-4 border-primary">
+<div class="flex justify-between items-start mb-2">
+<div>
+<p class="text-[10px] text-gray-400 uppercase font-bold">Revenue Growth</p>
+<p class="text-navy font-extrabold text-xl">+24.8%</p>
+</div>
+<span class="material-symbols-outlined text-green-500">trending_up</span>
+</div>
+<svg class="w-full h-12 overflow-visible" viewBox="0 0 100 30">
+<path d="M0 25 Q 25 20, 40 10 T 70 15 T 100 5" fill="none" stroke="#ff6a1a" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+</div>
+<div class="absolute top-1/4 -left-16 w-12 h-12 rounded-full bg-gradient-to-br from-yellow-300 to-orange-400 flex items-center justify-center text-white shadow-lg transform -rotate-12 z-10 floating-element">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<div class="absolute bottom-1/4 right-0 w-16 h-16 rounded-2xl bg-navy/80 backdrop-blur-md flex items-center justify-center text-primary shadow-xl transform rotate-12 z-10 border border-white/10 floating-element">
+<span class="material-symbols-outlined text-3xl">insights</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl lg:text-4xl font-bold text-navy mb-4">Still Tracking Your Business in Your Head?</h2>
+<p class="text-slate-text max-w-2xl mx-auto text-lg">Manual tracking is slow, prone to errors, and stressful. It's time to stop guessing and start knowing.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8 relative">
+<div class="group p-8 text-center relative z-10 transition-all hover:-translate-y-2">
+<div class="w-24 h-24 mx-auto bg-orange-50 rounded-full flex items-center justify-center mb-8 shadow-sm group-hover:bg-primary group-hover:bg-opacity-20 transition-all duration-300">
+<div class="relative">
+<span class="material-symbols-outlined text-5xl text-primary transform rotate-[-10deg]">menu_book</span>
+<span class="material-symbols-outlined text-3xl text-orange-300 absolute -top-4 -right-2">ink_pen</span>
+</div>
+</div>
+<h3 class="text-2xl font-bold text-navy mb-4">Messy Notebooks</h3>
+<p class="text-gray-500 leading-relaxed">Pages get lost, handwriting gets messy, and you can't search through paper to find that one receipt.</p>
+</div>
+<div class="group p-8 text-center relative z-10 transition-all hover:-translate-y-2">
+<div class="w-24 h-24 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-8 shadow-sm group-hover:bg-blue-200 transition-all duration-300">
+<div class="relative">
+<span class="material-symbols-outlined text-5xl text-blue-600">calculate</span>
+<span class="material-symbols-outlined text-2xl text-blue-400 absolute -bottom-2 -left-2">exposure_neg_1</span>
+<span class="material-symbols-outlined text-2xl text-blue-400 absolute -top-2 -right-2">exposure_plus_1</span>
+</div>
+</div>
+<h3 class="text-2xl font-bold text-navy mb-4">Endless Calculations</h3>
+<p class="text-gray-500 leading-relaxed">Wasting hours every Friday night punching numbers into a calculator only to miss a digit.</p>
+</div>
+<div class="group p-8 text-center relative z-10 transition-all hover:-translate-y-2">
+<div class="w-24 h-24 mx-auto bg-purple-50 rounded-full flex items-center justify-center mb-8 shadow-sm group-hover:bg-purple-200 transition-all duration-300">
+<div class="relative">
+<span class="material-symbols-outlined text-5xl text-purple-600">forum</span>
+<span class="material-symbols-outlined text-2xl text-purple-400 absolute -top-4 left-0">mark_unread_chat_alt</span>
+</div>
+</div>
+<h3 class="text-2xl font-bold text-navy mb-4">Scattered Messages</h3>
+<p class="text-gray-500 leading-relaxed">Orders in WhatsApp, receipts in Email, invoices in DMs. It's a logistical nightmare.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-background-light" id="features">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="text-primary font-semibold tracking-wider uppercase text-sm mb-2 block">Features</span>
+<h2 class="text-3xl lg:text-4xl font-bold text-navy mb-6">Everything You Need. Nothing You Don’t.</h2>
+<p class="text-lg text-slate-text">We stripped away the complexity of enterprise software to build something lean, fast, and perfect for you.</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-white p-8 rounded-[16px] shadow-soft hover:shadow-hover transition-all duration-300 group">
+<div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-100 transition-colors">
+<span class="material-icons text-blue-600">payments</span>
+</div>
+<h3 class="text-lg font-bold text-navy mb-3">Track Sales &amp; Expenses</h3>
+<p class="text-sm text-gray-500 leading-relaxed">Record transactions in seconds. Categorize them instantly to know exactly where money goes.</p>
+</div>
+<div class="bg-white p-8 rounded-[16px] shadow-soft hover:shadow-hover transition-all duration-300 group">
+<div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-orange-100 transition-colors">
+<span class="material-icons text-primary">groups</span>
+</div>
+<h3 class="text-lg font-bold text-navy mb-3">Manage Customers</h3>
+<p class="text-sm text-gray-500 leading-relaxed">Keep a digital rolodex. See purchase history and outstanding balances at a glance.</p>
+</div>
+<div class="bg-white p-8 rounded-[16px] shadow-soft hover:shadow-hover transition-all duration-300 group">
+<div class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-100 transition-colors">
+<span class="material-icons text-purple-600">insights</span>
+</div>
+<h3 class="text-lg font-bold text-navy mb-3">Clear Analytics</h3>
+<p class="text-sm text-gray-500 leading-relaxed">Visual charts that show your growth. No complex spreadsheets, just clear trends.</p>
+</div>
+<div class="bg-white p-8 rounded-[16px] shadow-soft hover:shadow-hover transition-all duration-300 group">
+<div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-100 transition-colors">
+<span class="material-icons text-green-600">share</span>
+</div>
+<h3 class="text-lg font-bold text-navy mb-3">Share Receipts</h3>
+<p class="text-sm text-gray-500 leading-relaxed">Generate professional digital receipts and share them via WhatsApp or Email instantly.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white relative overflow-hidden" id="how-it-works">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="text-center mb-20">
+<h2 class="text-3xl lg:text-4xl font-bold text-navy">Simple Workflow</h2>
+</div>
+<div class="relative">
+<div class="grid md:grid-cols-3 gap-12 text-center">
+<div class="relative group">
+<div class="bg-white p-2 inline-block rounded-full mb-8 relative">
+<div class="w-12 h-12 bg-navy text-white rounded-full flex items-center justify-center font-bold text-xl shadow-lg z-10 relative">1</div>
+<div class="absolute inset-0 bg-primary/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h3 class="text-xl font-bold text-navy mb-4">Sign Up Quickly</h3>
+<p class="text-gray-500 mb-8 max-w-xs mx-auto">Create an account in less than 2 minutes. No credit card required.</p>
+<div class="bg-background-light p-4 rounded-xl border border-gray-100 shadow-lg max-w-[240px] mx-auto transform group-hover:scale-105 transition-transform">
+<div class="flex flex-col gap-3">
+<div class="h-8 bg-white rounded w-full"></div>
+<div class="h-8 bg-white rounded w-full"></div>
+<div class="h-8 bg-primary rounded w-2/3 mx-auto mt-2"></div>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="bg-white p-2 inline-block rounded-full mb-8 relative">
+<div class="w-12 h-12 bg-navy text-white rounded-full flex items-center justify-center font-bold text-xl shadow-lg z-10 relative">2</div>
+<div class="absolute inset-0 bg-primary/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h3 class="text-xl font-bold text-navy mb-4">Input Your Data</h3>
+<p class="text-gray-500 mb-8 max-w-xs mx-auto">Add your sales and expenses on the go as they happen.</p>
+<div class="bg-background-light p-4 rounded-xl border border-gray-100 shadow-lg max-w-[240px] mx-auto transform group-hover:scale-105 transition-transform">
+<div class="flex items-center justify-between mb-3">
+<div class="w-8 h-8 rounded-full bg-white"></div>
+<div class="w-20 h-4 bg-white rounded"></div>
+</div>
+<div class="h-12 bg-white rounded border border-primary/20 flex items-center px-3">
+<span class="text-navy font-bold">$ 250.00</span>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="bg-white p-2 inline-block rounded-full mb-8 relative">
+<div class="w-12 h-12 bg-navy text-white rounded-full flex items-center justify-center font-bold text-xl shadow-lg z-10 relative">3</div>
+<div class="absolute inset-0 bg-primary/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h3 class="text-xl font-bold text-navy mb-4">View Insights</h3>
+<p class="text-gray-500 mb-8 max-w-xs mx-auto">See your business health instantly with clear dashboards.</p>
+<div class="bg-background-light p-4 rounded-xl border border-gray-100 shadow-lg max-w-[240px] mx-auto transform group-hover:scale-105 transition-transform">
+<div class="h-24 bg-white rounded-lg p-2 flex items-end justify-between gap-1">
+<div class="w-1/5 bg-primary/20 h-[40%] rounded-t-sm"></div>
+<div class="w-1/5 bg-primary/40 h-[60%] rounded-t-sm"></div>
+<div class="w-1/5 bg-primary h-[80%] rounded-t-sm"></div>
+<div class="w-1/5 bg-primary/30 h-[50%] rounded-t-sm"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-28 bg-white">
+<div class="max-w-4xl mx-auto px-4 text-center">
+<h2 class="text-4xl md:text-5xl font-extrabold text-navy leading-tight mb-8">
+            No stress. No confusion.<br/>
+<span class="text-primary">Just clear numbers.</span>
+</h2>
+<p class="text-xl text-gray-500 max-w-2xl mx-auto">
+            Join the community of entrepreneurs and business owners who have taken back control of their financial destiny.
+        </p>
+</div>
+</section>
+<section class="py-24 bg-navy relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="grid" patternUnits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+<h2 class="text-3xl md:text-5xl font-bold text-white mb-8 tracking-tight">
+            Ready to Take Control of Your Business?
+        </h2>
+<p class="text-gray-300 text-lg mb-10 max-w-xl mx-auto">
+            Use Ledgari.
+        </p>
+<div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+<div class="relative group bg-white/5 border border-white/10 backdrop-blur-lg px-8 py-5 rounded-2xl transition-all hover:bg-white/10">
+<div class="flex items-center gap-4">
+<div class="flex -space-x-3">
+<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-navy text-2xl">android</span>
+</div>
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-lg border-2 border-navy">
+<i class="fa-brands fa-apple text-navy text-2xl"></i>
+</div>
+</div>
+<div class="text-left">
+<p class="text-white font-bold text-xl leading-tight">Coming soon</p>
+<p class="text-primary font-medium text-sm">to Android and iPhone</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-white pt-16 pb-8 border-t border-gray-100">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+<div class="col-span-2 lg:col-span-2">
+<div class="flex items-center gap-3 mb-4">
+<img alt="Ledgari Logo" class="h-10 w-auto object-contain" src="assets\images\ledgari_logo_transparent.png"/>
+</div>
+<p class="text-gray-500 mb-6 max-w-xs">
+                    Empowering small businesses worldwide to achieve financial clarity.
+                </p>
+<div class="flex gap-4">
+<a class="text-gray-400 text-3xl hover:text-primary transition-colors" href="https://www.instagram.com/ledgari_"><i class="fa-brands fa-instagram"></i></a>
+</div>
+</div>
+<div class="col-span-1 lg:col-span-1">
+<h4 class="font-bold text-navy mb-4">Contact</h4>
+<ul class="space-y-3">
+<li class="flex items-start gap-2">
+<span class="material-icons text-primary text-sm">email</span>
+<a class="text-gray-500 hover:text-primary transition-colors text-sm" href="mailto:ledgariapp@gmail.com">ledgariapp@gmail.com</a>
+</li>
+</ul>
+</div>
+<div class="col-span-2 lg:col-span-2">
+<h4 class="font-bold text-navy mb-4">Location</h4>
+<ul class="space-y-3">
+<li class="flex items-start gap-2">
+<span class="material-icons text-primary text-sm mt-1">place</span>
+<span class="text-gray-500">Saskatoon, Saskatchewan<br/>Canada</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-gray-400 text-sm">© 2026 Ledgari Inc. All rights reserved.</p>
+<div class="flex gap-6 text-sm">
+<a class="text-gray-400 hover:text-primary transition-colors" href="#">Privacy Policy</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>
