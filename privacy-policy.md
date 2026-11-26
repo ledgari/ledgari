@@ -1,6 +1,6 @@
 **Privacy Policy**
 
-*Last updated: 30/10/2025*
+*Last updated: 30/03/2026*
 
 This Privacy Policy explains how **Ledgari** (“the App”, “we”, “our”, or “us”) collects, uses, and protects your information.
 
@@ -46,7 +46,8 @@ We do **not** sell, rent, or share your personal information for advertising or 
 We use the following third-party services:
 
 * **Supabase** — for authentication and data storage
-* **Google Play Billing** — to process subscriptions
+* **Google Play Billing / Apple App Store Billing** — to process subscriptions
+* **Revenue Cat** - to manage subscriptions
 
 These services only access data necessary to perform their functions and are governed by their own privacy policies.
 
@@ -75,6 +76,7 @@ You have the right to:
 
 To request account and data deletion, users may contact us via email at ledgariapp@gmail.com. Requests should include the account email address and business name for identification.
 Account deletion requests are processed within 30 days.
+Users can also delete their account in-app.
 
 ---
 
@@ -94,7 +96,7 @@ We may update this Privacy Policy from time to time. Changes will be reflected o
 
 If you have any questions about this Privacy Policy, please contact us at:
 
-**Email:** ledgariapp@gmail.com
+**Email:** [ledgariapp@gmail.com](mailto:ledgariapp@gmail.com)
 
 ---
 
